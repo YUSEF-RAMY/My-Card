@@ -1,0 +1,40 @@
+body{
+    background-color:#84A98C;
+    color: white;
+}
+#container{
+width: 30%;
+margin: auto;
+background-color:#52796F;
+padding: 10px;
+border-radius: 20px;
+}
+.shere-links{
+    width: 30%;
+    margin: auto;
+    text-align: right;
+    color: white;
+    padding-bottom: 50px;
+}
+.main-photo{
+    border: 2px;
+    border-radius: 20%;
+    margin-top: -70px;
+padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.two-icons{
+font-size: 20px;
+cursor: pointer;
+padding-left: 4px;
+}
+.connections{
+    font-size: 40px;
+}
+/* .input-text-fild{
+    width: 100px;
+    height: 100px;
+} */
