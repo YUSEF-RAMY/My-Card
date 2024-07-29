@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color:#84A98C;
     color: white;
 }
@@ -37,4 +37,29 @@ padding-left: 4px;
 /* .input-text-fild{
     width: 100px;
     height: 100px;
-} */
+} */ 
+ .container{
+    width: 30%;
+ }
+.main-photo{
+    max-width: 100%;
+    height: auto;
+
+}
+.shere-links{
+    font-size: 20px;
+}
+.fa-github{
+    font-size: 30px;
+    color: black;
+}
+.main-block{
+    background-color: gray;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: -70px;
+
+}
