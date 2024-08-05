@@ -20,17 +20,14 @@
 <div class="container  bg-secondary main-block">
     <section class="mx-1">
         <img class="main-photo img-fluid " src="image/Personal Photo.jpg" alt="" width="170px" height="170px"  >
-        <h1>Yusef Ramy</h1>
-        <h4>Computer Science</h4>
-        <h4>Web Developement</h4>
-        <p></p>
+        <h1 id="person_Name"></h1>
+        <h4 id="person_Collage"></h4>
+        <h4 id="person_job"></h4>
     </section>
 <hr>
 <div class="contacts-link col d-flex justify-content-between">
-    <a class="text-decoration-none text-dark" href="#"><img class="btn btn-success p-3" src="https://img.icons8.com/material-outlined/24/ffffff/save-close.png"/>Save</a>
-    <a class="text-decoration-none text-dark" href="#"><img class="btn btn-success p-3" src="https://img.icons8.com/material-outlined/24/ffffff/phone.png"/>Mobile</a>
-    <a class="text-decoration-none text-dark" href="#"><img class="btn btn-success p-3" src="https://img.icons8.com/material-outlined/24/ffffff/globe.png"/>Blog</a>
-    <a class="text-decoration-none text-dark" href="#"><img class="btn btn-success p-3" src="https://img.icons8.com/material-outlined/24/ffffff/email.png"/>Email</a><br>
+    <a id="person_phone" class="text-decoration-none text-dark" href="#"><img class="btn btn-success p-3" src="https://img.icons8.com/material-outlined/24/ffffff/phone.png"/>Mobile</a>
+    <a id="person_email" class="text-decoration-none text-dark" href="#"><img class="btn btn-success p-3" src="https://img.icons8.com/material-outlined/24/ffffff/email.png"/>Email</a><br>
 </div>
     <hr>
     <!-- ========start links======== -->
@@ -48,10 +45,47 @@
         <input class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12  form-control" type="number" placeholder="Ender Your Phone">
 
         <textarea class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12 d-block justify-content-center form-control" name="massage-me" placeholder="Your Comment"></textarea>
-        <input class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12 btn btn-success form-control" type="submit" value="Go">
+        <input id="submit-btn" class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12 btn btn-success form-control" type="submit" value="Go">
     </form>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function Person(Name,Collage,job,phone,email){
+        this.Name=Name;
+        this.Collage=Collage;
+        this.job=job;
+        this.phone=phone;
+        this.email=email;
+    }
+    const person = new Person(
+        'Yusef Ramy', 
+        'Computer Science',
+        'Web Developement',
+        '01095132780',
+        'yuseframy14@gmail.com'
+    )
+    function InnerById(attr_Id,Value){
+        document.getElementById(attr_Id).innerHTML=Value;
+    }
+    function SetHref(Href_Id,Value){
+        document.getElementById(Href_Id).href=Value;
+    }
+    InnerById('person_Name', person.Name);
+    InnerById('person_Collage', person.Collage);
+    InnerById('person_job', person.job);
+
+
+    SetHref('person_phone', 'tel:' + person.phone);
+    SetHref('person_email', 'mailto:' + person.email);
+
+console.log(person);
+
+
+
+        document.getElementById('submit-btn').onclick=function(){
+            alert("Enter Your info");
+            }
+</script>
 </body>
 </html>
