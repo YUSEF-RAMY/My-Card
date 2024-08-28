@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=,width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CCIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/Fontawesome/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="bg-success">
+    <section class="container mx-auto text-end head-links d-block m-2">
+        <i class="fa-solid fa-share two-icons"></i>
+        <i class="fa-solid fa-qrcode two-icons"></i>
+    </section>
+<div class="container main-block">
+    <section class="mx-1">
+        <img class="main-photo img-fluid " src="image/Personal Photo.jpg" alt="" width="170px" height="170px"  >
+        <h1 id="person_Name"></h1>
+        <h4 id="person_Collage"></h4>
+        <h4 id="person_job"></h4>
+        <h4 id="person_city"></h4>
+    </section>
+<hr>
+
+<div class="contacts-link col d-flex  justify-content-evenly ">
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="My Phone" id="person_phone" class="text-decoration-none text-dark" href="#"><img class="btn btn-dark p-3" src="https://img.icons8.com/material-outlined/24/ffffff/phone.png"/></a>
+    <a data-bs-toggle="tooltip" data-bs-placement="right" title="My Email" id="person_email" class="text-decoration-none text-dark" href="#"><img class="btn btn-dark p-3" src="https://img.icons8.com/material-outlined/24/ffffff/email.png"/></a><br>
+</div>
+    <hr>
+    <!-- ========start links======== -->
+    <div class="contacts-links col d-flex justify-content-between">
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Github" class="text-decoration-none text-dark" href="https://github.com/YUSEF-RAMY"><img class="btn" src="icons/github.png"/></a>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin" class="text-decoration-none text-dark" href="https://www.linkedin.com/in/yusef-ramy-ba178625b/"><img class="btn" src="icons/linkedin.png"/></a>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" class="text-decoration-none text-dark" href="https://www.facebook.com/YusefRamy14"><img class="btn" src="icons/facebook.png"/></a>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="My Certificates" class="text-decoration-none text-dark" href="Certificates.html" target="_blank"><img class="btn" src="icons/diploma-2.png"/></a>
+    </div>
+<hr>
+<!-- ============start form============ -->
+     <!-- <form action="" class="d-block col justify-content-center">
+        <input class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12  form-control" type="text" placeholder="Ender Your Name">
+        <input class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12  form-control" type="email" placeholder="Ender Your Email">
+        <input class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12  form-control" type="number" placeholder="Ender Your Phone">
+
+        <textarea class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12 d-block justify-content-center form-control" name="massage-me" placeholder="Your Comment"></textarea>
+        <input id="submit-btn" class="col-12col-sm-12 col-lg-12 col-xl-12 col-xxl-12 btn btn-success form-control" type="submit" value="Go">
+    </form> -->
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function Person(Name,Collage,job,phone,email,city){
+        this.Name=Name;
+        this.Collage=Collage;
+        this.job=job;
+        this.phone=phone;
+        this.email=email;
+        this.city=city;
+    }
+    const person = new Person(
+        'Yusef Ramy', 
+        'Computer Science',
+        'Web Developement',
+        '01095132780',
+        'yuseframy14@gmail.com',
+        'Mansoura City'
+    )
+    function InnerById(attr_Id,Value){
+        document.getElementById(attr_Id).innerHTML=Value;
+    }
+    function SetHref(Href_Id,Value){
+        document.getElementById(Href_Id).href=Value;
+    }
+    InnerById('person_Name', person.Name);
+    InnerById('person_Collage', person.Collage);
+    InnerById('person_job', person.job);
+    InnerById('person_city', person.city);
+    
+
+    SetHref('person_phone', 'tel:' + person.phone);
+    SetHref('person_email', 'mailto:' + person.email);
+
+console.log(person);
+
+
+
+        document.getElementById('submit-btn').onclick=function(){
+            alert("Enter Your info");
+            }
+</script>
+</body>
+</html>

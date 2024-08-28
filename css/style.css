@@ -1,0 +1,57 @@
+body{
+    background-image: url(../image/backPhoto.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgb(180, 150, 145);
+}
+.container{
+    width: 35%;
+}
+.head-links{
+    font-size: 30px;
+    cursor: pointer;
+}
+.main-photo{
+    margin-top: -80px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    min-width: 100px;
+}
+.main-block{
+    margin-top: 90px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    min-width: min-content;
+    height: 616px;
+    backdrop-filter: blur(13px);
+    box-shadow: 0 0 30px black;
+    border: 1px;
+
+}
+form{
+    height: 200px;
+}
+.contact-links > a{
+    font-size: 40px;
+    color: black;
+    display: flex;
+    
+}
+.contacts-link{
+    margin-left: 50px;
+}
+@media(min-width:100px){
+body{
+    background-image: url(../image/backPhoto.jpg);
+    /* background-repeat: repeat-y; */
+    background-size: 1500px;
+
+}
+}
